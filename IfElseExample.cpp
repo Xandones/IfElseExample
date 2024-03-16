@@ -1,5 +1,4 @@
 #include <iostream>
-#include <string>
 
 int main()
 {
@@ -14,12 +13,27 @@ int main()
 	{
 		std::cout << "\nAccess granted!" << "\n";
 		bAccess = true;
-		system("PAUSE");
 	}
 	else // In case of a wrong type password, the code will quit.
 	{
 		std::cout << "\n Access denied!" << "\n";
 		system("PAUSE");
 		exit(0);
+	}
+
+	//bSunnyDay = bCarIsReady = bSalaryDeposited = true; We may set the value to a lot of variables this way.
+	bSunnyDay = bSalaryDeposited = false;
+	bCarIsReady = false;
+	if (bAccess) // We only need the boolean variable name to test it in C++. It will only run the code if its true.
+	{
+		//if (bSunnyDay && bCarIsReady && bSalaryDeposited) The only way this expression will be true is if every part of it also is.
+		if (bSunnyDay || bCarIsReady || bSalaryDeposited) //This expression can only be false if all parts of it are false.
+		{
+			std::cout << "We will go to the beach!" << "\n";
+		}
+		else if (!bSalaryDeposited) // This elseif will only run if the OR expression is false. It checks if SalaryDeposited is false.
+		{
+			std::cout << "We can't go to the beach and the salary wasn't deposited!" << "\n";
+		}
 	}
 }
