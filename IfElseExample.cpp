@@ -6,7 +6,7 @@ int main()
 	std::string Password = "cplusplus";
 	std::string TypedPassword;
 
-	// This code is a login - you need to type the right password to use the application, otherwilse it will quit it.
+	// This code is a login - you need to type the right password to use the application, otherwise it will quit it.
 	std::cout << "Type the password: ";
 	std::cin >> TypedPassword;
 	if (TypedPassword == Password) // This is the case where the comparassion results positive, so the code will go to the next part.
@@ -29,7 +29,7 @@ int main()
 		//if (bSunnyDay && bCarIsReady && bSalaryDeposited) The only way this expression will be true is if every part of it also is.
 		if (bSunnyDay || bCarIsReady || bSalaryDeposited) //This expression can only be false if all parts of it are false.
 		{
-			std::cout << "We will go to the beach!" << "\n";
+			std::cout << "We will go to the beach because the car is ready and the salary is deposited!" << "\n";
 		}
 		else if (!bSalaryDeposited) // This elseif will only run if the OR expression is false. It checks if SalaryDeposited is false.
 		{
