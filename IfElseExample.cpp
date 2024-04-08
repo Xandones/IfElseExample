@@ -29,7 +29,7 @@ int main()
 		//if (bSunnyDay && bCarIsReady && bSalaryDeposited) The only way this expression will be true is if every part of it also is.
 		if (bSunnyDay || bCarIsReady || bSalaryDeposited) //This expression can only be false if all parts of it are false.
 		{
-			std::cout << "We will go to the beach because the car is ready and the salary is deposited!" << "\n";
+			std::cout << "We will go to the beach because the car is ready, the salary is deposited and it is a sunny day!" << "\n";
 		}
 		else if (!bSalaryDeposited) // This elseif will only run if the OR expression is false. It checks if SalaryDeposited is false.
 		{
